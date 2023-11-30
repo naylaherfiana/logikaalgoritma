@@ -11,7 +11,26 @@ struct data {
 } buku[MAX] = { {"No Longer Human", "Osamu Dazai", 2020, 70000, 50},
                 {"The Human Chair", "Edogawa Ranpo", 2016, 100000, 20},
                 {"River Mist And Other Stories", "Doppo Kunikida", 1983, 4799000, 3},
-                {"Hell Screen", "Ryuunosuke Akutagawa", 2022, 170000, 50}};
+                {"Hell Screen", "Ryuunosuke Akutagawa", 2022, 170000, 50},
+                {"World After the Fall", "Singnsong", 2022, 375000, 3},
+                {"Omniscient Reader's Viewpoint", "Singnsong", 2022, 145000, 30},
+                {"Heaven Official's Blessing", "Mo Xiang Tong Xiu", 2020, 375000, 10},
+                {"Laskar Pelangi", "Andrea Hirata", 2005, 79000, 15},
+                {"The Beginning After The End", "TurtleMe", 2019, 119000, 15},
+                {"Hyouka", " Honobu Yonezawa", 2001, 115000, 20},
+                {"Mushoku Tensei: Jobless Reincarnation", "Rifujin na Magonote", 2014, 149000, 15},
+                {"Violet Evergarden", "Kana Akatsuki", 2015, 149000, 20},
+                {"The Apothecary Diaries", "Natsu Hyūga", 2011, 119000, 15},
+                {"86 -Eighty Six-", "Asato Asato", 2017, 149000, 15},
+                {"Beyond the Boundary", "Nagomu Torii", 2012, 119000, 15},
+                {"To Every You I've Loved Before", "Yomoji Otono", 2016, 119000, 12},
+                {"To Me, the One Who Loved You", "Yomoji Otono", 2016, 119000, 13},
+                {"I Want Eat Your Pancreas", "Sumino Yoru", 2016, 149000, 15},
+                {"The Tunnel to Summer, the Exit of Goodbyes", "Mei Hachimoku", 2022, 260000, 8},
+                {"Three Days of Happiness", "Sugaru Miaki", 2013, 179000, 7},
+                {"Strike the Blood", "Gakuto Mikumo", 2011, 129000, 5},
+                {"Weathering with You", "Makoto Shinkai", 2019, 189000, 15}};
+
 
 void classTable(void);
 void list(void);
