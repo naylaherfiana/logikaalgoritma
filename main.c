@@ -17,7 +17,7 @@ struct data {
                 {"Heaven Official's Blessing", "Mo Xiang Tong Xiu", 2020, 375000, 10},
                 {"Laskar Pelangi", "Andrea Hirata", 2005, 79000, 15},
                 {"The Beginning After The End", "TurtleMe", 2019, 119000, 15},
-                {"Hyouka", " Honobu Yonezawa", 2001, 115000, 20},
+                {"Hyouka  ", " Honobu Yonezawa", 2001, 115000, 20},
                 {"Mushoku Tensei: Jobless Reincarnation", "Rifujin na Magonote", 2014, 149000, 15},
                 {"Violet Evergarden", "Kana Akatsuki", 2015, 149000, 20},
                 {"The Apothecary Diaries", "Natsu Hyūga", 2011, 119000, 15},
@@ -121,7 +121,7 @@ void printTable(int i) {
 void list() {
     printf("\n\t\t\t\t\tToko Buku\n\n");
     classTable();
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < 20; i++) {
         printTable(i);
     }
 }
