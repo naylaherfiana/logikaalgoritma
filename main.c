@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#define MAX 30
+#define MAX 15
 
 struct data {
     char judul[30];
@@ -14,23 +14,15 @@ struct data {
                 {"Hell Screen", "Ryuunosuke Akutagawa", 2022, 170000, 50},
                 {"World After the Fall", "Singnsong", 2022, 375000, 3},
                 {"Omniscient Reader's Viewpoint", "Singnsong", 2022, 145000, 30},
-                {"Heaven Official's Blessing", "Mo Xiang Tong Xiu", 2020, 375000, 10},
                 {"Laskar Pelangi", "Andrea Hirata", 2005, 79000, 15},
-                {"The Beginning After The End", "TurtleMe", 2019, 119000, 15},
-                {"Hyouka  ", " Honobu Yonezawa", 2001, 115000, 20},
-                {"Mushoku Tensei: Jobless Reincarnation", "Rifujin na Magonote", 2014, 149000, 15},
                 {"Violet Evergarden", "Kana Akatsuki", 2015, 149000, 20},
                 {"The Apothecary Diaries", "Natsu Hyūga", 2011, 119000, 15},
                 {"86 -Eighty Six-", "Asato Asato", 2017, 149000, 15},
                 {"Beyond the Boundary", "Nagomu Torii", 2012, 119000, 15},
-                {"To Every You I've Loved Before", "Yomoji Otono", 2016, 119000, 12},
                 {"To Me, the One Who Loved You", "Yomoji Otono", 2016, 119000, 13},
-                {"I Want Eat Your Pancreas", "Sumino Yoru", 2016, 149000, 15},
-                {"The Tunnel to Summer, the Exit of Goodbyes", "Mei Hachimoku", 2022, 260000, 8},
                 {"Three Days of Happiness", "Sugaru Miaki", 2013, 179000, 7},
                 {"Strike the Blood", "Gakuto Mikumo", 2011, 129000, 5},
                 {"Weathering with You", "Makoto Shinkai", 2019, 189000, 15}};
-
 
 void classTable(void);
 void list(void);
@@ -121,7 +113,7 @@ void printTable(int i) {
 void list() {
     printf("\n\t\t\t\t\tToko Buku\n\n");
     classTable();
-    for (int i = 0; i < 20; i++) {
+    for (int i = 0; i < MAX; i++) {
         printTable(i);
     }
 }
@@ -134,7 +126,7 @@ void beli() {
     in_buku[strcspn(in_buku, "\n")] = 0;
     found = 0;
 
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < MAX; i++) {
         if (strcasecmp(buku[i].judul, in_buku) == 0) {
             found++;
             index = i;
@@ -167,7 +159,7 @@ void cariJudul() {
     in_buku[strcspn(in_buku, "\n")] = 0;
     found = 0;
 
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < MAX; i++) {
         if (strcasecmp(buku[i].judul, in_buku) == 0) {
             found++;
             index = i;
@@ -192,25 +184,18 @@ void cariPenulis() {
     in_writer[strcspn(in_writer, "\n")] = 0;
     found = 0;
 
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < MAX; i++) {
         if (strcasecmp(buku[i].penulis, in_writer) == 0) {
             found++;
+            printTable(i);
         }
     }
 
-    if (found != 0) {
-        printf("\n");
-        classTable();
-        for (int i = 0; i < 4; i++) {
-            if (strcasecmp(buku[i].penulis, in_writer) == 0) {
-                printTable(i);
-            }
-        }
-        printf("\n");
-    } else {
+    if (found == 0) {
         printf("\nPenulis Tidak Ditemukan :(\n");
     }
 }
+
 
 void cekStok() {
     int found, index;
@@ -220,7 +205,7 @@ void cekStok() {
     in_buku[strcspn(in_buku, "\n")] = 0;
     found = 0;
 
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < MAX; i++) {
         if (strcasecmp(buku[i].judul, in_buku) == 0) {
             found++;
             index = i;
